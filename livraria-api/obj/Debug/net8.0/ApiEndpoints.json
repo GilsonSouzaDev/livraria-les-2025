@@ -1,0 +1,176 @@
+[
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.CartaoCreditoClienteController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/CartaoCreditoCliente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.CartaoCreditoClienteController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/CartaoCreditoCliente/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.CartaoCreditoClienteController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/CartaoCreditoCliente/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cartaoCreditoCliente",
+        "Type": "livraria_api.api.Domain.Models.CartaoCreditoCliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.CartaoCreditoClienteController",
+    "Method": "InsertAsync",
+    "RelativePath": "api/CartaoCreditoCliente/inserir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartaoCreditoCliente",
+        "Type": "livraria_api.api.Domain.Models.CartaoCreditoCliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.CartaoCreditoClienteController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/CartaoCreditoCliente/listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.ClienteController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/Cliente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.ClienteController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/Cliente/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cliente",
+        "Type": "livraria_api.api.Domain.Models.Cliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.ClienteController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Cliente/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.ClienteController",
+    "Method": "GetClienteCompleto",
+    "RelativePath": "api/Cliente/{id}/completo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.ClienteController",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Cliente/inserir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cliente",
+        "Type": "livraria_api.api.Domain.Models.Cliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.ClienteController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Cliente/listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
