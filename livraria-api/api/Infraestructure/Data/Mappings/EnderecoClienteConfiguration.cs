@@ -19,7 +19,7 @@ public class EnderecoClienteConfiguration : IEntityTypeConfiguration<EnderecoCli
         builder.Property(x => x.Cidade).IsRequired();
         builder.Property(x => x.Estado).IsRequired();
         builder.Property(x => x.Pais).IsRequired();
-        builder.Property(x => x.Observacoes).IsRequired(false);
+        builder.Property(x => x.Observacoes);
         builder.Property(x => x.UsoCobranca).IsRequired(false);
 
     }

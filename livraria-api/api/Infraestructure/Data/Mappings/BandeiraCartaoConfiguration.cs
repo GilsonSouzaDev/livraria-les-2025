@@ -10,7 +10,7 @@ public class BandeiraCartaoConfiguration : IEntityTypeConfiguration<BandeiraCart
     {
         builder.ToTable("BandeirasCartao");
         builder.HasKey(b => b.BandeiraId);
-        builder.Property(b => b.NomeBandeira).IsRequired().HasMaxLength(50); // Adicionado HasMaxLength para consistência.
+        builder.Property(b => b.NomeBandeira).IsRequired().HasMaxLength(50);
 
         //Opcional: se quiser configurar o relacionamento do lado da Bandeira.
         builder.HasMany(b => b.CartoesCreditoClientes)

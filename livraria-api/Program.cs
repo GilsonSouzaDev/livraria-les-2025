@@ -16,6 +16,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 builder.Services.AddScoped<ICartaoCreditoClienteRepository, CartaoCreditoClienteRepository>();
 builder.Services.AddScoped<IEnderecoClienteRepository, EnderecoClienteRepository>();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();

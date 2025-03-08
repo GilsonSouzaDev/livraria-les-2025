@@ -1,5 +1,7 @@
-﻿using livraria_api.api.Domain.Interfaces.IRepositorys; // Certifique-se de ter este using
+﻿using AutoMapper;
+using livraria_api.api.Domain.Interfaces.IRepositorys; // Certifique-se de ter este using
 using livraria_api.api.Domain.Models;
+using livraria_api.api.UI.DTOs.ClienteDTO;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -11,10 +13,12 @@ namespace livraria_api.api.UI.Controllers;
 public class ClienteController : ControllerBase
 {
     private readonly IClienteRepository _clienteRepository; // Injeta diretamente o repositório
+    private IMapper _mapper;
 
-    public ClienteController(IClienteRepository clienteRepository)
+    public ClienteController(IClienteRepository clienteRepository, IMapper mapper)
     {
         _clienteRepository = clienteRepository;
+        _mapper = mapper;
     }
 
     [HttpGet("{id}/completo")]
@@ -63,9 +67,10 @@ public class ClienteController : ControllerBase
             return StatusCode(500, ex.Message);
         }
     }
+
     [HttpPost]
     [Route("inserir")]
-    public async Task<IActionResult> CreateAsync([FromBody] Cliente cliente)
+    public async Task<IActionResult> CreateAsync([FromBody] ClienteCreateDto clienteDto)
     {
         if (!ModelState.IsValid)
         {
@@ -73,14 +78,18 @@ public class ClienteController : ControllerBase
         }
         try
         {
-            var novoCliente = await _clienteRepository.AddAsync(cliente);
+            var novoCliente = _mapper.Map<Cliente>(clienteDto);
+            await _clienteRepository.AddAsync(novoCliente);
             return Ok();
         }
         catch (Exception ex)
         {
             return BadRequest(ex.Message);
+
         }
+
     }
+
 
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateAsync(int id, [FromBody] Cliente cliente)

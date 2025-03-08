@@ -16,11 +16,11 @@ namespace livraria_api.api.Infraestructure.Data.Context;
         {
         }
 
-        public DbSet<BandeiraCartao> BandeirasCartoes { get; set; }
-        public DbSet<CartaoCreditoCliente> CartoesCreditoClientes { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<EnderecoCliente> EnderecosClientes { get; set; }
         public DbSet<TelefoneCliente> TelefonesClientes { get; set; }
+        public DbSet<CartaoCreditoCliente> CartoesCreditoClientes { get; set; }
+        public DbSet<BandeiraCartao> BandeirasCartoes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

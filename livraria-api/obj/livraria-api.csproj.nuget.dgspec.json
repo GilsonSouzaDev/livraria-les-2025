@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\documentos-gilson\\GilsonDesktop\\LES\\livraria_les-2025\\livraria-api\\livraria-api.csproj": {}
+    "C:\\Users\\gilso\\OneDrive\\Área de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\livraria-api.csproj": {}
   },
   "projects": {
-    "D:\\documentos-gilson\\GilsonDesktop\\LES\\livraria_les-2025\\livraria-api\\livraria-api.csproj": {
+    "C:\\Users\\gilso\\OneDrive\\Área de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\livraria-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\documentos-gilson\\GilsonDesktop\\LES\\livraria_les-2025\\livraria-api\\livraria-api.csproj",
+        "projectUniqueName": "C:\\Users\\gilso\\OneDrive\\Área de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\livraria-api.csproj",
         "projectName": "livraria-api",
-        "projectPath": "D:\\documentos-gilson\\GilsonDesktop\\LES\\livraria_les-2025\\livraria-api\\livraria-api.csproj",
+        "projectPath": "C:\\Users\\gilso\\OneDrive\\Área de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\livraria-api.csproj",
         "packagesPath": "C:\\Users\\gilso\\.nuget\\packages\\",
-        "outputPath": "D:\\documentos-gilson\\GilsonDesktop\\LES\\livraria_les-2025\\livraria-api\\obj\\",
+        "outputPath": "C:\\Users\\gilso\\OneDrive\\Área de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.3.0, )"

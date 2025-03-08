@@ -5,19 +5,17 @@ namespace livraria_api.api.Domain.Models;
 public class Cliente
 {
     public int ClienteId { get; set; }
-    
+    public string? CodigoCliente { get; set; }
 
-    public string CodigoCliente { get; set; } = null!;
+    public string? Genero { get; set; }
 
-    public string Genero { get; set; } = null!;
-
-    public string Nome { get; set; } = null!;
+    public string? Nome { get; set; }
 
     public DateTime DataNascimento { get; set; }
 
-    public string Cpf { get; set; } = null!;
+    public string? Cpf { get; set; }
 
-    public string Email { get; set; } = null!;
+    public string? Email { get; set; }
 
     public int? Ranking { get; set; }
 

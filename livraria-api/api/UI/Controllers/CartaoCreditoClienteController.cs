@@ -17,7 +17,7 @@ public class CartaoCreditoClienteController : Controller
     }
 
     [HttpGet]
-    [Route("listar")]
+    [Route("listar-cartoes")]
     public async Task<IActionResult> GetAllAsync()
     {
         try
@@ -51,7 +51,7 @@ public class CartaoCreditoClienteController : Controller
 
 
     [HttpPost]
-    [Route("inserir")]
+    [Route("inserir-cartoes")]
     public async Task<IActionResult> InsertAsync([FromBody] CartaoCreditoCliente cartaoCreditoCliente)
     {
         try

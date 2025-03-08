@@ -55,7 +55,7 @@
   {
     "ContainingType": "livraria_api.api.UI.Controllers.CartaoCreditoClienteController",
     "Method": "InsertAsync",
-    "RelativePath": "api/CartaoCreditoCliente/inserir",
+    "RelativePath": "api/CartaoCreditoCliente/inserir-cartoes",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -71,7 +71,7 @@
   {
     "ContainingType": "livraria_api.api.UI.Controllers.CartaoCreditoClienteController",
     "Method": "GetAllAsync",
-    "RelativePath": "api/CartaoCreditoCliente/listar",
+    "RelativePath": "api/CartaoCreditoCliente/listar-cartoes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -156,8 +156,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cliente",
-        "Type": "livraria_api.api.Domain.Models.Cliente",
+        "Name": "clienteDto",
+        "Type": "livraria_api.api.UI.DTOs.ClienteDTO.ClienteCreateDto",
         "IsRequired": true
       }
     ],
