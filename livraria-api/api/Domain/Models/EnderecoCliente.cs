@@ -35,6 +35,7 @@ public class EnderecoCliente
 
     public bool? UsoCobranca { get; set; }
 
+    
     [JsonIgnore]
     public virtual Cliente Cliente { get; set; } = null!;
 }

@@ -78,14 +78,15 @@ public class ClienteController : ControllerBase
         }
         try
         {
+           
             var novoCliente = _mapper.Map<Cliente>(clienteDto);
             await _clienteRepository.AddAsync(novoCliente);
             return Ok();
         }
         catch (Exception ex)
         {
-            return BadRequest(ex.Message);
-
+            //Breakpoint aqui!
+            return StatusCode(500, $"Erro interno: {ex.Message}. Detalhes: {ex.InnerException?.Message ?? "N/A"}");
         }
 
     }
@@ -118,6 +119,7 @@ public class ClienteController : ControllerBase
             existingCliente.CodigoCliente = cliente.CodigoCliente;
 
             //Removendo a Atualização dos relacionamentos, vamos criar controllers separados para isso.
+
 
             await _clienteRepository.UpdateAsync(existingCliente);
             return NoContent();

@@ -172,5 +172,163 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.EnderecoClienteController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/EnderecoCliente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.EnderecoClienteController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/EnderecoCliente/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.EnderecoClienteController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/EnderecoCliente/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "enderecoClienteUpdateDto",
+        "Type": "livraria_api.api.UI.DTOs.EnderecoDTO.EnderecoClienteUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.EnderecoClienteController",
+    "Method": "InsertAsync",
+    "RelativePath": "api/EnderecoCliente/inserir-enderecos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enderecoClienteDto",
+        "Type": "livraria_api.api.UI.DTOs.EnderecoDTO.EnderecoClienteCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.EnderecoClienteController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/EnderecoCliente/listar-enderecos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.TelefoneClienteController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/TelefoneCliente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.TelefoneClienteController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/TelefoneCliente/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.TelefoneClienteController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/TelefoneCliente/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "telefoneClienteUpdateDto",
+        "Type": "livraria_api.api.UI.DTOs.TelefoneDTO.TelefoneClienteUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.TelefoneClienteController",
+    "Method": "InsertAsync",
+    "RelativePath": "api/TelefoneCliente/inserir-telefones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "telefoneClienteDto",
+        "Type": "livraria_api.api.UI.DTOs.TelefoneDTO.TelefoneClienteCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.TelefoneClienteController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/TelefoneCliente/listar-telefones",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
