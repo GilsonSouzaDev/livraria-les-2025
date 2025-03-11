@@ -132,6 +132,41 @@
         }
       }
     },
+    "/api/Cliente/{id}/completo": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cliente/listar": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Cliente/{id}": {
       "get": {
         "tags": [
@@ -208,18 +243,6 @@
               "format": "int32"
             }
           }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Cliente/listar": {
-      "get": {
-        "tags": [
-          "Cliente"
         ],
         "responses": {
           "200": {
@@ -517,11 +540,6 @@
   "components": {
     "schemas": {
       "CartaoCreditoCliente": {
-        "required": [
-          "codigoSeguranca",
-          "nomeNoCartao",
-          "numeroCartao"
-        ],
         "type": "object",
         "properties": {
           "cartaoCreditoClienteId": {
@@ -537,19 +555,16 @@
             "format": "int32"
           },
           "numeroCartao": {
-            "maxLength": 19,
-            "minLength": 13,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "nomeNoCartao": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "codigoSeguranca": {
-            "minLength": 1,
-            "pattern": "^\\d{3,4}$",
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "preferencial": {
             "type": "boolean"
@@ -558,14 +573,6 @@
         "additionalProperties": false
       },
       "Cliente": {
-        "required": [
-          "codigoCliente",
-          "cpf",
-          "dataNascimento",
-          "email",
-          "genero",
-          "nome"
-        ],
         "type": "object",
         "properties": {
           "clienteId": {
@@ -573,31 +580,28 @@
             "format": "int32"
           },
           "codigoCliente": {
-            "maxLength": 20,
-            "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "genero": {
-            "maxLength": 10,
-            "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "nome": {
-            "maxLength": 150,
-            "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "dataNascimento": {
             "type": "string",
             "format": "date-time"
           },
           "cpf": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "email": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "ranking": {
             "type": "integer",
@@ -685,16 +689,6 @@
         "additionalProperties": false
       },
       "EnderecoCliente": {
-        "required": [
-          "cep",
-          "cidade",
-          "logradouro",
-          "nomeEndereco",
-          "numero",
-          "pais",
-          "tipoLogradouro",
-          "tipoResidencia"
-        ],
         "type": "object",
         "properties": {
           "enderecoId": {
@@ -706,46 +700,44 @@
             "format": "int32"
           },
           "nomeEndereco": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "tipoResidencia": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "tipoLogradouro": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "logradouro": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "numero": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "bairro": {
             "type": "string",
             "nullable": true
           },
           "cep": {
-            "minLength": 1,
-            "pattern": "^\\d{5}-?\\d{3}$",
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "cidade": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "estado": {
-            "pattern": "^[A-Za-z]{2}$",
             "type": "string",
             "nullable": true
           },
           "pais": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "observacoes": {
             "type": "string",
@@ -875,11 +867,6 @@
         "additionalProperties": false
       },
       "TelefoneCliente": {
-        "required": [
-          "ddd",
-          "numero",
-          "tipoTelefone"
-        ],
         "type": "object",
         "properties": {
           "telefoneId": {
@@ -891,18 +878,16 @@
             "format": "int32"
           },
           "tipoTelefone": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "ddd": {
-            "minLength": 1,
-            "pattern": "^\\d{2}$",
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "numero": {
-            "minLength": 1,
-            "pattern": "^\\d{8,9}$",
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

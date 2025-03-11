@@ -80,7 +80,7 @@
   },
   {
     "ContainingType": "livraria_api.api.UI.Controllers.ClienteController",
-    "Method": "GetClienteCompleto",
+    "Method": "GetByIdAsync",
     "RelativePath": "api/Cliente/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -133,6 +133,22 @@
   },
   {
     "ContainingType": "livraria_api.api.UI.Controllers.ClienteController",
+    "Method": "GetClienteCompleto",
+    "RelativePath": "api/Cliente/{id}/completo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "livraria_api.api.UI.Controllers.ClienteController",
     "Method": "CreateAsync",
     "RelativePath": "api/Cliente/inserir",
     "HttpMethod": "POST",
@@ -141,7 +157,7 @@
     "Parameters": [
       {
         "Name": "clienteDto",
-        "Type": "livraria_api.api.UI.DTOs.ClienteCreateDto",
+        "Type": "livraria_api.api.UI.DTOs.ClienteDTO.ClienteCreateDto",
         "IsRequired": true
       }
     ],
@@ -204,7 +220,7 @@
       },
       {
         "Name": "enderecoClienteUpdateDto",
-        "Type": "livraria_api.api.UI.DTOs.EnderecoClienteUpdateDto",
+        "Type": "livraria_api.api.UI.DTOs.EnderecoDTO.EnderecoClienteUpdateDto",
         "IsRequired": true
       }
     ],
@@ -220,7 +236,7 @@
     "Parameters": [
       {
         "Name": "enderecoClienteDto",
-        "Type": "livraria_api.api.UI.DTOs.EnderecoClienteCreateDto",
+        "Type": "livraria_api.api.UI.DTOs.EnderecoDTO.EnderecoClienteCreateDto",
         "IsRequired": true
       }
     ],
@@ -283,7 +299,7 @@
       },
       {
         "Name": "telefoneClienteUpdateDto",
-        "Type": "livraria_api.api.UI.DTOs.TelefoneClienteUpdateDto",
+        "Type": "livraria_api.api.UI.DTOs.TelefoneDTO.TelefoneClienteUpdateDto",
         "IsRequired": true
       }
     ],
@@ -299,7 +315,7 @@
     "Parameters": [
       {
         "Name": "telefoneClienteDto",
-        "Type": "livraria_api.api.UI.DTOs.TelefoneClienteCreateDto",
+        "Type": "livraria_api.api.UI.DTOs.TelefoneDTO.TelefoneClienteCreateDto",
         "IsRequired": true
       }
     ],

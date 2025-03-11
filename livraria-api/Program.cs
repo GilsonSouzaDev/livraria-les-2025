@@ -2,6 +2,7 @@ using livraria_api.api.Domain.Interfaces.IRepositorys;
 using livraria_api.api.Infraestructure.Data.Context;
 using livraria_api.api.Infraestructure.Data.Repositorys;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 

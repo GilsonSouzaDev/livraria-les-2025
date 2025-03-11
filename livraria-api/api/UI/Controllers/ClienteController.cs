@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using livraria_api.api.Domain.Interfaces.IRepositorys; // Certifique-se de ter este using
 using livraria_api.api.Domain.Models;
-using livraria_api.api.UI.DTOs.ClienteDTO;
+using livraria_api.api.UI.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -21,7 +21,7 @@ public class ClienteController : ControllerBase
         _mapper = mapper;
     }
 
-    [HttpGet("{id}/completo")]
+    [HttpGet("{id}")]
     public async Task<IActionResult> GetClienteCompleto(int id)
     {
         try
@@ -52,21 +52,6 @@ public class ClienteController : ControllerBase
             return StatusCode(500, ex.Message);
         }
     }
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetByIdAsync(int id)
-    {
-        try
-        {
-            var cliente = await _clienteRepository.GetByIdAsync(id);
-            if (cliente is null) return NotFound();
-
-            return Ok(cliente);
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, ex.Message);
-        }
-    }
 
     [HttpPost]
     [Route("inserir")]
@@ -78,14 +63,15 @@ public class ClienteController : ControllerBase
         }
         try
         {
+           
             var novoCliente = _mapper.Map<Cliente>(clienteDto);
             await _clienteRepository.AddAsync(novoCliente);
             return Ok();
         }
         catch (Exception ex)
         {
-            return BadRequest(ex.Message);
-
+            //Breakpoint aqui!
+            return StatusCode(500, $"Erro interno: {ex.Message}. Detalhes: {ex.InnerException?.Message ?? "N/A"}");
         }
 
     }
@@ -118,6 +104,7 @@ public class ClienteController : ControllerBase
             existingCliente.CodigoCliente = cliente.CodigoCliente;
 
             //Removendo a Atualização dos relacionamentos, vamos criar controllers separados para isso.
+
 
             await _clienteRepository.UpdateAsync(existingCliente);
             return NoContent();

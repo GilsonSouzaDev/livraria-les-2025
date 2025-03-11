@@ -706,7 +706,6 @@ C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-202
 C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.livraria-api.props
 C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.livraria-api.props
 C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\obj\Debug\net8.0\livraria.68B3ED5D.Up2Date
 C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\obj\Debug\net8.0\livraria-api.dll
 C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\obj\Debug\net8.0\refint\livraria-api.dll
@@ -715,3 +714,4 @@ C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-202
 C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\obj\Debug\net8.0\ref\livraria-api.dll
 C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\gilso\OneDrive\Área de Trabalho\LES\livraria_les-2025\livraria-les-2025\livraria-api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
