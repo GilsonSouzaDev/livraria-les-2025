@@ -11,7 +11,11 @@ public class EnderecoClienteRepository : RepositoryBase<EnderecoCliente>, IEnder
 
     public async Task<bool> ExistsAsync(int id)
     {
+<<<<<<< HEAD
         return await _context.EnderecosClientes.AnyAsync(e => e.EnderecoId == id); // Específico para CartaoCreditoCliente
+=======
+        return await _context.EnderecosClientes.AnyAsync(e => e.EnderecoId == id); // Específico para EnderecoCliente
+>>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
     }
 }
 

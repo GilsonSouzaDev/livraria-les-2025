@@ -819,6 +819,67 @@
       "EnderecoClienteUpdateDto": {
         "type": "object",
         "properties": {
+<<<<<<< HEAD
+=======
+          "clienteID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nomeEndereco": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoResidencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoLogradouro": {
+            "type": "string",
+            "nullable": true
+          },
+          "logradouro": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "cep": {
+            "type": "string",
+            "nullable": true
+          },
+          "cidade": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais": {
+            "type": "string",
+            "nullable": true
+          },
+          "observacoes": {
+            "type": "string",
+            "nullable": true
+          },
+          "usoCobranca": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EnderecoClienteUpdateDto": {
+        "type": "object",
+        "properties": {
+>>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
           "id": {
             "type": "integer",
             "format": "int32"

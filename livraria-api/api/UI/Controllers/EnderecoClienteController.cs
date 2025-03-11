@@ -1,7 +1,12 @@
 ﻿using AutoMapper;
 using livraria_api.api.Domain.Interfaces.IRepositorys;
 using livraria_api.api.Domain.Models;
+<<<<<<< HEAD
 using livraria_api.api.UI.DTOs;
+=======
+using livraria_api.api.UI.DTOs.EnderecoDTO;
+using livraria_api.api.UI.DTOs.TelefoneDTO;
+>>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

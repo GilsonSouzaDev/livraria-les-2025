@@ -1,6 +1,12 @@
 ﻿using AutoMapper;
 using livraria_api.api.Domain.Models;
+<<<<<<< HEAD
 using livraria_api.api.UI.DTOs;
+=======
+using livraria_api.api.UI.DTOs.ClienteDTO;
+using livraria_api.api.UI.DTOs.EnderecoDTO;
+using livraria_api.api.UI.DTOs.TelefoneDTO;
+>>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
 
 namespace livraria_api.api.Profiles;
 
