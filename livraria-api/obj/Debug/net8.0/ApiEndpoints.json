@@ -204,11 +204,7 @@
       },
       {
         "Name": "enderecoClienteUpdateDto",
-<<<<<<< HEAD
         "Type": "livraria_api.api.UI.DTOs.EnderecoClienteUpdateDto",
-=======
-        "Type": "livraria_api.api.UI.DTOs.EnderecoDTO.EnderecoClienteUpdateDto",
->>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
         "IsRequired": true
       }
     ],
@@ -224,11 +220,7 @@
     "Parameters": [
       {
         "Name": "enderecoClienteDto",
-<<<<<<< HEAD
         "Type": "livraria_api.api.UI.DTOs.EnderecoClienteCreateDto",
-=======
-        "Type": "livraria_api.api.UI.DTOs.EnderecoDTO.EnderecoClienteCreateDto",
->>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
         "IsRequired": true
       }
     ],
@@ -291,11 +283,7 @@
       },
       {
         "Name": "telefoneClienteUpdateDto",
-<<<<<<< HEAD
         "Type": "livraria_api.api.UI.DTOs.TelefoneClienteUpdateDto",
-=======
-        "Type": "livraria_api.api.UI.DTOs.TelefoneDTO.TelefoneClienteUpdateDto",
->>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
         "IsRequired": true
       }
     ],
@@ -311,11 +299,7 @@
     "Parameters": [
       {
         "Name": "telefoneClienteDto",
-<<<<<<< HEAD
         "Type": "livraria_api.api.UI.DTOs.TelefoneClienteCreateDto",
-=======
-        "Type": "livraria_api.api.UI.DTOs.TelefoneDTO.TelefoneClienteCreateDto",
->>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
         "IsRequired": true
       }
     ],

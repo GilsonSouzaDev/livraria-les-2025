@@ -6,9 +6,10 @@ CREATE TABLE Clientes (
     CodigoCliente VARCHAR(20) UNIQUE NOT NULL,  
     Genero VARCHAR(20) NOT NULL,  
     Nome VARCHAR(255) NOT NULL, 
-    DataNascimento DATE NOT NULL, 
+    DataNascimento VARCHAR(10) NOT NULL, 
     CPF VARCHAR(14) UNIQUE NOT NULL, 
-    Email VARCHAR(255) UNIQUE NOT NULL, 
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    Pontuacao INT, 
     Ranking INT,  
     Ativo BOOLEAN DEFAULT TRUE  
 );

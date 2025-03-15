@@ -17,6 +17,7 @@ public class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
         builder.HasIndex(c => c.Cpf).IsUnique(); // Mantém a unicidade.
         builder.Property(c => c.Email).IsRequired().HasMaxLength(255);
         builder.HasIndex(c => c.Email);
+        builder.Property(c => c.Pontuacao).IsRequired(false);
         builder.Property(c => c.Ranking).IsRequired(false); // Permite nulos.
         builder.Property(c => c.Ativo).IsRequired().HasDefaultValue(true);
 

@@ -2,7 +2,7 @@
 {
     public class TelefoneClienteDto
     {
-        public int Id { get; set; }
+        public int telefoneId { get; set; }
         public int ClienteID { get; set; } // Mantenha o ClienteID
         public string TipoTelefone { get; set; }
         public string Ddd { get; set; }
@@ -11,7 +11,7 @@
 
     public class TelefoneClienteUpdateDto
     {
-        public int Id { get; set; }
+        public int telefoneId { get; set; }
         public string? TipoTelefone { get; set; }
         public string? Ddd { get; set; }
         public string? Numero { get; set; }

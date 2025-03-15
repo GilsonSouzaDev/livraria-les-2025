@@ -2,7 +2,7 @@
 {
     public class EnderecoClienteDto
     {
-        public int Id { get; set; }
+        public int enderedoId { get; set; }
         public int ClienteID { get; set; }
         public string NomeEndereco { get; set; }
         public string TipoResidencia { get; set; }
@@ -38,7 +38,7 @@
 
     public class EnderecoClienteUpdateDto
     {
-        public int Id { get; set; }
+        public int enderecoId { get; set; }
         public string? NomeEndereco { get; set; }
         public string? TipoResidencia { get; set; }
         public string? TipoLogradouro { get; set; }

@@ -21,7 +21,7 @@ public class Cliente
     public string? Nome { get; set; }
 
     [Required(ErrorMessage = "A data de nascimento é obrigatória.")]
-    public DateTime DataNascimento { get; set; }
+    public string DataNascimento { get; set; }
 
     [Required(ErrorMessage = "O CPF é obrigatório.")]
     public string? Cpf { get; set; }
@@ -29,6 +29,7 @@ public class Cliente
     [Required(ErrorMessage = "O e-mail é obrigatório.")]
     public string? Email { get; set; }
 
+    public int? Pontuacao { get; set; }
 
     public int? Ranking { get; set; }
 

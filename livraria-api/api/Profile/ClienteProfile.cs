@@ -1,12 +1,11 @@
 ﻿using AutoMapper;
 using livraria_api.api.Domain.Models;
-<<<<<<< HEAD
 using livraria_api.api.UI.DTOs;
-=======
-using livraria_api.api.UI.DTOs.ClienteDTO;
-using livraria_api.api.UI.DTOs.EnderecoDTO;
-using livraria_api.api.UI.DTOs.TelefoneDTO;
->>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
+using ClienteCompletoDto = livraria_api.api.UI.DTOs.ClienteCompletoDto;
+using ClienteCreateDto = livraria_api.api.UI.DTOs.ClienteCreateDto;
+using EnderecoClienteCreateDto = livraria_api.api.UI.DTOs.EnderecoClienteCreateDto;
+using TelefoneClienteCreateDto = livraria_api.api.UI.DTOs.TelefoneClienteCreateDto;
+
 
 namespace livraria_api.api.Profiles;
 
@@ -18,7 +17,8 @@ public class ClienteProfile : Profile
         CreateMap<ClienteDto, Cliente>()
             .ForMember(dest => dest.ClienteId, opt => opt.MapFrom(src => src.Id)) // Consistência no nome do campo
             .ForMember(dest => dest.Cpf, opt => opt.MapFrom(src => src.CPF))
-            .ForMember(dest => dest.Ranking, opt => opt.MapFrom(src => src.Ranking ?? 0)) // Definir valor padrão para Ranking se nulo
+            .ForMember(dest => dest.Ranking, opt => opt.MapFrom(src => src.Ranking ?? 0))
+            .ForMember(dest => dest.Pontuacao, opt => opt.MapFrom(src => src.Pontuacao ?? 0))// Definir valor padrão para Ranking se nulo
             .ForMember(dest => dest.Ativo, opt => opt.MapFrom(src => src.Ativo)); // Definir valor de Ativo se nulo
 
         // Mapeamento para atualização de Cliente (ClienteUpdateDto -> Cliente)

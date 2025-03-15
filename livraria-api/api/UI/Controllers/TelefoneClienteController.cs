@@ -2,14 +2,12 @@
 using livraria_api.api.Domain.Interfaces.IRepositorys;
 using livraria_api.api.Domain.Models;
 using livraria_api.api.Infraestructure.Data.Repositorys;
-<<<<<<< HEAD
 using livraria_api.api.UI.DTOs;
-=======
-using livraria_api.api.UI.DTOs.TelefoneDTO;
->>>>>>> a8da6b2678709aa9e12392f9997af486f5ca127e
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TelefoneClienteCreateDto = livraria_api.api.UI.DTOs.TelefoneClienteCreateDto;
+using TelefoneClienteUpdateDto = livraria_api.api.UI.DTOs.TelefoneClienteUpdateDto;
 
 namespace livraria_api.api.UI.Controllers
 {
@@ -105,7 +103,7 @@ namespace livraria_api.api.UI.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (telefoneClienteUpdateDto.Id != id)
+            if (telefoneClienteUpdateDto.telefoneId != id)
             {
                 return BadRequest("Id indicado não corresponde à um indentificador válido.");
             }
