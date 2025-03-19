@@ -102,6 +102,7 @@ public class ClienteController : ControllerBase
             existingCliente.Ranking = cliente.Ranking;
             existingCliente.DataNascimento = cliente.DataNascimento;
             existingCliente.CodigoCliente = cliente.CodigoCliente;
+            existingCliente.Ativo = cliente.Ativo;
 
             //Removendo a Atualização dos relacionamentos, vamos criar controllers separados para isso.
 

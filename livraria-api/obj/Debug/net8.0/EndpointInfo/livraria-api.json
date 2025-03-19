@@ -638,31 +638,45 @@
         "additionalProperties": false
       },
       "ClienteCreateDto": {
+        "required": [
+          "codigoCliente",
+          "cpf",
+          "dataNascimento",
+          "email",
+          "genero",
+          "nome"
+        ],
         "type": "object",
         "properties": {
           "codigoCliente": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9]{5,20}$",
+            "type": "string"
           },
           "genero": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^(Masculino|Feminino|Outro)$",
+            "type": "string"
           },
           "nome": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,100}$",
+            "type": "string"
           },
           "dataNascimento": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^\\d{2}/\\d{2}/\\d{4}$",
+            "type": "string"
           },
           "cpf": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$",
+            "type": "string"
           },
           "email": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[\\w\\.-]+@[a-zA-Z\\d.-]+\\.[a-zA-Z]{2,}$",
+            "type": "string"
           },
           "pontuacao": {
             "type": "integer",
@@ -769,6 +783,18 @@
         "additionalProperties": false
       },
       "EnderecoClienteCreateDto": {
+        "required": [
+          "bairro",
+          "cep",
+          "cidade",
+          "estado",
+          "logradouro",
+          "nomeEndereco",
+          "numero",
+          "pais",
+          "tipoLogradouro",
+          "tipoResidencia"
+        ],
         "type": "object",
         "properties": {
           "clienteID": {
@@ -776,44 +802,54 @@
             "format": "int32"
           },
           "nomeEndereco": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,100}$",
+            "type": "string"
           },
           "tipoResidencia": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,50}$",
+            "type": "string"
           },
           "tipoLogradouro": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,50}$",
+            "type": "string"
           },
           "logradouro": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ0-9\\s]{3,150}$",
+            "type": "string"
           },
           "numero": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^(\\d{1,10}|S/N)$",
+            "type": "string"
           },
           "bairro": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,100}$",
+            "type": "string"
           },
           "cep": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^\\d{5}-\\d{3}$",
+            "type": "string"
           },
           "cidade": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,100}$",
+            "type": "string"
           },
           "estado": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{2,100}$",
+            "type": "string"
           },
           "pais": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,100}$",
+            "type": "string"
           },
           "observacoes": {
             "type": "string",
@@ -827,6 +863,18 @@
         "additionalProperties": false
       },
       "EnderecoClienteUpdateDto": {
+        "required": [
+          "bairro",
+          "cep",
+          "cidade",
+          "estado",
+          "logradouro",
+          "nomeEndereco",
+          "numero",
+          "pais",
+          "tipoLogradouro",
+          "tipoResidencia"
+        ],
         "type": "object",
         "properties": {
           "enderecoId": {
@@ -834,44 +882,54 @@
             "format": "int32"
           },
           "nomeEndereco": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,100}$",
+            "type": "string"
           },
           "tipoResidencia": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,50}$",
+            "type": "string"
           },
           "tipoLogradouro": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,50}$",
+            "type": "string"
           },
           "logradouro": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ0-9\\s]{3,150}$",
+            "type": "string"
           },
           "numero": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^(\\d{1,10}|S/N)$",
+            "type": "string"
           },
           "bairro": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,100}$",
+            "type": "string"
           },
           "cep": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^\\d{5}-\\d{3}$",
+            "type": "string"
           },
           "cidade": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,100}$",
+            "type": "string"
           },
           "estado": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{2,100}$",
+            "type": "string"
           },
           "pais": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[A-Za-zÀ-ÿ\\s]{3,100}$",
+            "type": "string"
           },
           "observacoes": {
             "type": "string",
@@ -885,11 +943,6 @@
         "additionalProperties": false
       },
       "TelefoneCliente": {
-        "required": [
-          "ddd",
-          "numero",
-          "tipoTelefone"
-        ],
         "type": "object",
         "properties": {
           "telefoneId": {
@@ -897,6 +950,33 @@
             "format": "int32"
           },
           "clienteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoTelefone": {
+            "type": "string",
+            "nullable": true
+          },
+          "ddd": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TelefoneClienteCreateDto": {
+        "required": [
+          "ddd",
+          "numero",
+          "tipoTelefone"
+        ],
+        "type": "object",
+        "properties": {
+          "clienteID": {
             "type": "integer",
             "format": "int32"
           },
@@ -917,29 +997,12 @@
         },
         "additionalProperties": false
       },
-      "TelefoneClienteCreateDto": {
-        "type": "object",
-        "properties": {
-          "clienteID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "tipoTelefone": {
-            "type": "string",
-            "nullable": true
-          },
-          "ddd": {
-            "type": "string",
-            "nullable": true
-          },
-          "numero": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "TelefoneClienteUpdateDto": {
+        "required": [
+          "ddd",
+          "numero",
+          "tipoTelefone"
+        ],
         "type": "object",
         "properties": {
           "telefoneId": {
@@ -947,16 +1010,18 @@
             "format": "int32"
           },
           "tipoTelefone": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "ddd": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^\\d{2}$",
+            "type": "string"
           },
           "numero": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^\\d{8,9}$",
+            "type": "string"
           }
         },
         "additionalProperties": false
