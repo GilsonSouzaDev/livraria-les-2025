@@ -1,5 +1,8 @@
-﻿namespace livraria_api.api.Domain.Interfaces.IStrategies;
+﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-public interface IStrategieBase
+namespace livraria_api.api.Domain.Interfaces.IStrategies;
+
+public interface IStrategieBase<T> where T : class
 {
+    Task<string> Processar(T entidade);
 }

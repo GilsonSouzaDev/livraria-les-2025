@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using livraria_api.api.Domain.Interfaces.IFacades;
 using livraria_api.api.Domain.Interfaces.IRepositorys;
 using livraria_api.api.Domain.Models;
 using livraria_api.api.UI.DTOs;
@@ -14,12 +15,12 @@ namespace livraria_api.api.UI.Controllers
     [ApiController]
     public class EnderecoClienteController : ControllerBase
     {
-        private readonly IEnderecoClienteRepository _enderecoClienteRepository;
+        private readonly IEnderecoClienteFacade _enderecoClienteFacade;
         private IMapper _mapper;
 
-        public EnderecoClienteController(IEnderecoClienteRepository enderecoClienteRepository, IMapper mapper)
+        public EnderecoClienteController(IEnderecoClienteFacade enderecoClienteFacade, IMapper mapper)
         {
-            this._enderecoClienteRepository = enderecoClienteRepository;
+            this._enderecoClienteFacade = enderecoClienteFacade;
             this._mapper = mapper;
         }
 
@@ -29,7 +30,7 @@ namespace livraria_api.api.UI.Controllers
         {
             try
             {
-                var result = await _enderecoClienteRepository.GetAllAsync();
+                var result = await _enderecoClienteFacade.GetAllAsync();
                 return Ok(result);
             }
             catch (Exception ex)
@@ -43,7 +44,7 @@ namespace livraria_api.api.UI.Controllers
         {
             try
             {
-                var telefone = await _enderecoClienteRepository.GetByIdAsync(id);
+                var telefone = await _enderecoClienteFacade.GetByIdAsync(id);
                 if (telefone == null)
                 {
                     return NotFound();
@@ -63,7 +64,7 @@ namespace livraria_api.api.UI.Controllers
             try
             {
                 var enderecoCliente = _mapper.Map<EnderecoCliente>(enderecoClienteDto);
-                await _enderecoClienteRepository.AddAsync(enderecoCliente);
+                await _enderecoClienteFacade.AddAsync(enderecoCliente);
                 return Ok(enderecoCliente);
             }
             catch (DbUpdateException ex)
@@ -82,9 +83,9 @@ namespace livraria_api.api.UI.Controllers
         {
             try
             {
-                var telefone = await _enderecoClienteRepository.GetByIdAsync(id);
+                var telefone = await _enderecoClienteFacade.GetByIdAsync(id);
                 if (telefone is null) return NotFound("Este identificador não corresponde a um telefone valido");
-                await _enderecoClienteRepository.DeleteAsync(telefone);
+                await _enderecoClienteFacade.DeleteAsync(telefone);
                 return NoContent();
             }
             catch (Exception ex)
@@ -110,7 +111,7 @@ namespace livraria_api.api.UI.Controllers
             try
             {
                 // Buscando a entidade para garantir que exista
-                var existingEndereco = await _enderecoClienteRepository.GetByIdAsync(id);
+                var existingEndereco = await _enderecoClienteFacade.GetByIdAsync(id);
                 if (existingEndereco is null) return NotFound();
 
                 existingEndereco.NomeEndereco = enderecoClienteUpdateDto.NomeEndereco;
@@ -128,12 +129,12 @@ namespace livraria_api.api.UI.Controllers
 
 
 
-                await _enderecoClienteRepository.UpdateAsync(existingEndereco); // Passa *existingCartao*.
+                await _enderecoClienteFacade.UpdateAsync(existingEndereco); // Passa *existingCartao*.
                 return NoContent();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!await _enderecoClienteRepository.ExistsAsync(id))
+                if (!await _enderecoClienteFacade.ExistsAsync(id))
                 {
                     return NotFound();
                 }

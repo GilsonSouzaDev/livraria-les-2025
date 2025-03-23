@@ -11,7 +11,7 @@ public class TelefoneClienteRepository : RepositoryBase<TelefoneCliente>, ITelef
 
     public async Task<bool> ExistsAsync(int id)
     {
-        return await _context.TelefonesClientes.AnyAsync(e => e.TelefoneId == id); // Específico para CartaoCreditoCliente
+        return await _context.TelefonesClientes.AnyAsync(e => e.TelefoneId == id);
     }
 }
 

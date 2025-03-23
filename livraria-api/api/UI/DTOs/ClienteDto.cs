@@ -19,7 +19,6 @@ namespace livraria_api.api.UI.DTOs
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "O campo DataNascimento é obrigatório.")]
-        [RegularExpression(@"^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}$", ErrorMessage = "O campo DataNascimento deve estar no formato DD/MM/AAAA.")]
         public string DataNascimento { get; set; }
 
         [Required(ErrorMessage = "O campo CPF é obrigatório.")]
@@ -49,7 +48,6 @@ namespace livraria_api.api.UI.DTOs
         public string? Nome { get; set; }
 
         [Required(ErrorMessage = "O campo DataNascimento é obrigatório.")]
-        [RegularExpression(@"^\d{2}/\d{2}/\d{4}$", ErrorMessage = "DataNascimento deve estar no formato dd/MM/yyyy.")]
         public string? DataNascimento { get; set; }
 
         [Required(ErrorMessage = "O campo CPF é obrigatório.")]
@@ -81,7 +79,6 @@ namespace livraria_api.api.UI.DTOs
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "O campo DataNascimento é obrigatório.")]
-        [RegularExpression(@"^\d{2}/\d{2}/\d{4}$", ErrorMessage = "DataNascimento deve estar no formato dd/MM/yyyy.")]
         public string DataNascimento { get; set; }
 
         [Required(ErrorMessage = "O campo CPF é obrigatório.")]
@@ -118,7 +115,6 @@ namespace livraria_api.api.UI.DTOs
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "O campo DataNascimento é obrigatório.")]
-        [RegularExpression(@"^\d{2}/\d{2}/\d{4}$", ErrorMessage = "DataNascimento deve estar no formato dd/MM/yyyy.")]
         public string DataNascimento { get; set; }
 
         [Required(ErrorMessage = "O campo CPF é obrigatório.")]

@@ -2,7 +2,7 @@
 
 namespace livraria_api.api.Domain.Interfaces.IFacades
 {
-    public interface ICartaoCreditoClienteFacade : IFacadeBase<CartaoCreditoCliente>
+    public interface IEnderecoClienteFacade : IFacadeBase<EnderecoCliente>
     {
         Task<bool> ExistsAsync(int id);
     }

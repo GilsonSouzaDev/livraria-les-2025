@@ -665,7 +665,6 @@
           },
           "dataNascimento": {
             "minLength": 1,
-            "pattern": "^\\d{2}/\\d{2}/\\d{4}$",
             "type": "string"
           },
           "cpf": {

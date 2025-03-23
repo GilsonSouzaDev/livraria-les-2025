@@ -1,4 +1,10 @@
+using livraria.api.Infraestructure.Business.Strategies.CartaoCreditoClienteStrategies;
+using livraria_api.api.Application.Facades;
+using livraria_api.api.Domain.Interfaces.IFacades;
 using livraria_api.api.Domain.Interfaces.IRepositorys;
+using livraria_api.api.Domain.Interfaces.IStrategies;
+using livraria_api.api.Domain.Models;
+using livraria_api.api.Infraestructure.Business.Strategies.ClienteStrategies;
 using livraria_api.api.Infraestructure.Data.Context;
 using livraria_api.api.Infraestructure.Data.Repositorys;
 using Microsoft.EntityFrameworkCore;
@@ -19,10 +25,23 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.AddScoped<IStrategieBase<CartaoCreditoCliente>, ProcessarPreferencia>();
+
+builder.Services.AddScoped<IStrategieBase<Cliente>, ProcessarObrigatoriedadeEndereco>();
+builder.Services.AddScoped<IStrategieBase<Cliente>, ProcessarObrigatoriedadeCobranca>();
+
+
+builder.Services.AddScoped<ICartaoCreditoClienteFacade, CartaoCreditoClienteFacade>();
+builder.Services.AddScoped<IClienteFacade, ClienteFacade>();
+builder.Services.AddScoped<IEnderecoClienteFacade, EnderecoClienteFacade>();
+builder.Services.AddScoped<ITelefoneClienteFacade, TelefoneClienteFacade>();
+
+
 builder.Services.AddScoped<ICartaoCreditoClienteRepository, CartaoCreditoClienteRepository>();
 builder.Services.AddScoped<IEnderecoClienteRepository, EnderecoClienteRepository>();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<ITelefoneClienteRepository, TelefoneClienteRepository>();
+
 
 var app = builder.Build();
 

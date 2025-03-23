@@ -1,4 +1,5 @@
-﻿using livraria_api.api.Domain.Interfaces.IRepositorys;
+﻿using livraria_api.api.Domain.Interfaces.IFacades;
+using livraria_api.api.Domain.Interfaces.IRepositorys;
 using livraria_api.api.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,11 +10,11 @@ namespace livraria_api.api.UI.Controllers;
 [ApiController]
 public class CartaoCreditoClienteController : Controller
 {
-    private readonly ICartaoCreditoClienteRepository   _cartaoCreditoClienteRepository;
+    private readonly ICartaoCreditoClienteFacade   _cartaoCreditoClienteFacade;
 
-    public CartaoCreditoClienteController(ICartaoCreditoClienteRepository cartaoCreditoClienteRepository)
+    public CartaoCreditoClienteController(ICartaoCreditoClienteFacade cartaoCreditoClienteFacade)
     {
-        _cartaoCreditoClienteRepository = cartaoCreditoClienteRepository;
+        _cartaoCreditoClienteFacade = cartaoCreditoClienteFacade;
     }
 
     [HttpGet]
@@ -22,7 +23,7 @@ public class CartaoCreditoClienteController : Controller
     {
         try
         {
-            var result = await _cartaoCreditoClienteRepository.GetAllAsync();
+            var result = await _cartaoCreditoClienteFacade.GetAllAsync();
             return Ok(result);
         }
         catch (Exception ex)
@@ -36,7 +37,7 @@ public class CartaoCreditoClienteController : Controller
     {
         try
         {
-            var cartao = await _cartaoCreditoClienteRepository.GetByIdAsync(id);
+            var cartao = await _cartaoCreditoClienteFacade.GetByIdAsync(id);
             if (cartao == null)
             {
                 return NotFound();
@@ -56,7 +57,7 @@ public class CartaoCreditoClienteController : Controller
     {
         try
         {
-            await _cartaoCreditoClienteRepository.AddAsync(cartaoCreditoCliente);
+            await _cartaoCreditoClienteFacade.AddAsync(cartaoCreditoCliente);
             return Ok(cartaoCreditoCliente);
         }
         catch (DbUpdateException ex)
@@ -75,9 +76,9 @@ public class CartaoCreditoClienteController : Controller
     {
         try
         {
-            var cartao = await _cartaoCreditoClienteRepository.GetByIdAsync(id);
+            var cartao = await _cartaoCreditoClienteFacade.GetByIdAsync(id);
             if (cartao is null) return NotFound();
-            await _cartaoCreditoClienteRepository.DeleteAsync(cartao);
+            await _cartaoCreditoClienteFacade.DeleteAsync(cartao);
             return NoContent();
         }
         catch (Exception ex)
@@ -102,7 +103,7 @@ public class CartaoCreditoClienteController : Controller
         try
         {
             // Buscando a entidade para garantir que exista
-            var existingCartao = await _cartaoCreditoClienteRepository.GetByIdAsync(id);
+            var existingCartao = await _cartaoCreditoClienteFacade.GetByIdAsync(id);
             if (existingCartao is null) return NotFound();
             
             existingCartao.BandeiraID = cartaoCreditoCliente.BandeiraID;
@@ -111,12 +112,12 @@ public class CartaoCreditoClienteController : Controller
             existingCartao.CodigoSeguranca = cartaoCreditoCliente.CodigoSeguranca;
             existingCartao.Preferencial = cartaoCreditoCliente.Preferencial;
             
-            await _cartaoCreditoClienteRepository.UpdateAsync(existingCartao); // Passa *existingCartao*.
+            await _cartaoCreditoClienteFacade.UpdateAsync(existingCartao); // Passa *existingCartao*.
             return NoContent();
         }
         catch (DbUpdateConcurrencyException)
         {
-            if (!await _cartaoCreditoClienteRepository.ExistsAsync(id))
+            if (!await _cartaoCreditoClienteFacade.ExistsAsync(id))
             {
                 return NotFound();
             }

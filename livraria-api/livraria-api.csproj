@@ -25,8 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="api\Infraestructure\Business\" />
-    <Folder Include="api\Infraestructure\Business\Strategies\" />
+    <Folder Include="api\Infraestructure\Business\Strategies\EnderecoTelefoneStrategies\" />
+    <Folder Include="api\Infraestructure\Business\Strategies\TelefoneClienteStrategies\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using livraria_api.api.Domain.Interfaces.IFacades;
 using livraria_api.api.Domain.Interfaces.IRepositorys; // Certifique-se de ter este using
 using livraria_api.api.Domain.Models;
 using livraria_api.api.UI.DTOs;
@@ -12,12 +13,12 @@ namespace livraria_api.api.UI.Controllers;
 [ApiController]
 public class ClienteController : ControllerBase
 {
-    private readonly IClienteRepository _clienteRepository; // Injeta diretamente o repositório
+    private readonly IClienteFacade _clienteFacade; // Injeta diretamente o repositório
     private IMapper _mapper;
 
-    public ClienteController(IClienteRepository clienteRepository, IMapper mapper)
+    public ClienteController(IClienteFacade clienteFacade, IMapper mapper)
     {
-        _clienteRepository = clienteRepository;
+        _clienteFacade = clienteFacade;
         _mapper = mapper;
     }
 
@@ -26,7 +27,7 @@ public class ClienteController : ControllerBase
     {
         try
         {
-            var cliente = await _clienteRepository.GetClienteCompletoByIdAsync(id); // Usa o método do repositório
+            var cliente = await _clienteFacade.GetClienteCompletoByIdAsync(id); // Usa o método do repositório
             if (cliente == null)
             {
                 return NotFound();
@@ -44,7 +45,7 @@ public class ClienteController : ControllerBase
     {
         try
         {
-            var result = await _clienteRepository.GetAllAsync();
+            var result = await _clienteFacade.GetAllAsync();
             return Ok(result);
         }
         catch (Exception ex)
@@ -65,7 +66,7 @@ public class ClienteController : ControllerBase
         {
            
             var novoCliente = _mapper.Map<Cliente>(clienteDto);
-            await _clienteRepository.AddAsync(novoCliente);
+            await _clienteFacade.AddAsync(novoCliente);
             return Ok();
         }
         catch (Exception ex)
@@ -92,7 +93,7 @@ public class ClienteController : ControllerBase
         try
         {
             // Buscando a entidade para garantir que exista
-            var existingCliente = await _clienteRepository.GetByIdAsync(id);
+            var existingCliente = await _clienteFacade.GetByIdAsync(id);
             if (existingCliente is null) return NotFound();
 
             existingCliente.Nome = cliente.Nome;
@@ -107,7 +108,7 @@ public class ClienteController : ControllerBase
             //Removendo a Atualização dos relacionamentos, vamos criar controllers separados para isso.
 
 
-            await _clienteRepository.UpdateAsync(existingCliente);
+            await _clienteFacade.UpdateAsync(existingCliente);
             return NoContent();
         }
         catch (Exception ex)
@@ -121,12 +122,12 @@ public class ClienteController : ControllerBase
     {
         try
         {
-            var cliente = await _clienteRepository.GetByIdAsync(id);
+            var cliente = await _clienteFacade.GetByIdAsync(id);
             if (cliente is null)
             {
                 throw new Exception("Cliente não encontrado");
             }
-            await _clienteRepository.DeleteAsync(cliente);
+            await _clienteFacade.DeleteAsync(cliente);
             return NoContent();
         }
         catch (Exception ex)

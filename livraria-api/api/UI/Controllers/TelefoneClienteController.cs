@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using livraria_api.api.Domain.Interfaces.IFacades;
 using livraria_api.api.Domain.Interfaces.IRepositorys;
 using livraria_api.api.Domain.Models;
 using livraria_api.api.Infraestructure.Data.Repositorys;
@@ -15,12 +16,12 @@ namespace livraria_api.api.UI.Controllers
     [ApiController]
     public class TelefoneClienteController : ControllerBase
     {
-        private readonly ITelefoneClienteRepository _tefoneClienteRepository;
+        private readonly ITelefoneClienteFacade _tefoneClienteFacade;
         private IMapper _mapper;
 
-        public TelefoneClienteController(ITelefoneClienteRepository tefoneClienteRepository, IMapper mapper)
+        public TelefoneClienteController(ITelefoneClienteFacade tefoneClienteFacade, IMapper mapper)
         {
-            this._tefoneClienteRepository = tefoneClienteRepository;
+            this._tefoneClienteFacade = tefoneClienteFacade;
             this._mapper = mapper;
         }
 
@@ -30,7 +31,7 @@ namespace livraria_api.api.UI.Controllers
         {
             try
             {
-                var result = await _tefoneClienteRepository.GetAllAsync();
+                var result = await _tefoneClienteFacade.GetAllAsync();
                 return Ok(result);
             }
             catch (Exception ex)
@@ -44,7 +45,7 @@ namespace livraria_api.api.UI.Controllers
         {
             try
             {
-                var telefone = await _tefoneClienteRepository.GetByIdAsync(id);
+                var telefone = await _tefoneClienteFacade.GetByIdAsync(id);
                 if (telefone == null)
                 {
                     return NotFound();
@@ -64,7 +65,7 @@ namespace livraria_api.api.UI.Controllers
             try
             {
                 var telefoneCliente = _mapper.Map<TelefoneCliente>(telefoneClienteDto);
-                await _tefoneClienteRepository.AddAsync(telefoneCliente);
+                await _tefoneClienteFacade.AddAsync(telefoneCliente);
                 return Ok(telefoneCliente);
             }
             catch (DbUpdateException ex)
@@ -83,9 +84,9 @@ namespace livraria_api.api.UI.Controllers
         {
             try
             {
-                var telefone = await _tefoneClienteRepository.GetByIdAsync(id);
+                var telefone = await _tefoneClienteFacade.GetByIdAsync(id);
                 if (telefone is null) return NotFound("Este identificador não corresponde a um telefone valido");
-                await _tefoneClienteRepository.DeleteAsync(telefone);
+                await _tefoneClienteFacade.DeleteAsync(telefone);
                 return NoContent();
             }
             catch (Exception ex)
@@ -111,7 +112,7 @@ namespace livraria_api.api.UI.Controllers
             try
             {
                 // Buscando a entidade para garantir que exista
-                var existingTelefone = await _tefoneClienteRepository.GetByIdAsync(id);
+                var existingTelefone = await _tefoneClienteFacade.GetByIdAsync(id);
                 if (existingTelefone is null) return NotFound();
 
                 existingTelefone.TipoTelefone = telefoneClienteUpdateDto.TipoTelefone;
@@ -119,15 +120,15 @@ namespace livraria_api.api.UI.Controllers
                 existingTelefone.Numero = telefoneClienteUpdateDto.Numero;
                
 
-                await _tefoneClienteRepository.UpdateAsync(existingTelefone); // Passa *existingCartao*.
+                await _tefoneClienteFacade.UpdateAsync(existingTelefone); // Passa *existingCartao*.
                 return NoContent();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!await _tefoneClienteRepository.ExistsAsync(id))
+                if (!await _tefoneClienteFacade.ExistsAsync(id))
                 {
                     return NotFound();
-                }
+                }           
                 else
                 {
                     return Conflict("O cartão foi modificado por outro usuário.");

@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|c:\\users\\gilso\\onedrive\\\u00E1rea de trabalho\\les\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\ui\\dtos\\cartaocreditoclientecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|solutionrelative:livraria-api\\api\\ui\\dtos\\cartaocreditoclientecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|c:\\users\\gilso\\onedrive\\\u00E1rea de trabalho\\les\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\ui\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|solutionrelative:livraria-api\\api\\ui\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|c:\\users\\gilso\\onedrive\\\u00E1rea de trabalho\\les\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\ui\\dtos\\enderecoclientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|solutionrelative:livraria-api\\api\\ui\\dtos\\enderecoclientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|c:\\users\\gilso\\onedrive\\\u00E1rea de trabalho\\les\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\ui\\dtos\\telefoneclientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|solutionrelative:livraria-api\\api\\ui\\dtos\\telefoneclientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|c:\\users\\gilso\\onedrive\\\u00E1rea de trabalho\\les\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\profile\\clienteprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|solutionrelative:livraria-api\\api\\profile\\clienteprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|c:\\users\\gilso\\onedrive\\\u00E1rea de trabalho\\les\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\ui\\dtos\\bandeiracartaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|solutionrelative:livraria-api\\api\\ui\\dtos\\bandeiracartaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|c:\\users\\gilso\\onedrive\\\u00E1rea de trabalho\\les\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\application\\facades\\clientefacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A78BB8A-89F7-4F01-8DBA-ACC9FEDD94F4}|livraria-api\\livraria-api.csproj|solutionrelative:livraria-api\\api\\application\\facades\\clientefacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TelefoneClienteDto.cs",
-              "DocumentMoniker": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\TelefoneClienteDto.cs",
-              "RelativeDocumentMoniker": "livraria-api\\api\\UI\\DTOs\\TelefoneClienteDto.cs",
-              "ToolTip": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\TelefoneClienteDto.cs",
-              "RelativeToolTip": "livraria-api\\api\\UI\\DTOs\\TelefoneClienteDto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAoAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T01:00:01.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnderecoClienteDto.cs",
-              "DocumentMoniker": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\EnderecoClienteDto.cs",
-              "RelativeDocumentMoniker": "livraria-api\\api\\UI\\DTOs\\EnderecoClienteDto.cs",
-              "ToolTip": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\EnderecoClienteDto.cs",
-              "RelativeToolTip": "livraria-api\\api\\UI\\DTOs\\EnderecoClienteDto.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAqwIsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T01:00:00.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BandeiraCartaoDto.cs",
-              "DocumentMoniker": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\BandeiraCartaoDto.cs",
-              "RelativeDocumentMoniker": "livraria-api\\api\\UI\\DTOs\\BandeiraCartaoDto.cs",
-              "ToolTip": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\BandeiraCartaoDto.cs",
-              "RelativeToolTip": "livraria-api\\api\\UI\\DTOs\\BandeiraCartaoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T00:59:57.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CartaoCreditoClienteCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\CartaoCreditoClienteCreateDto.cs",
-              "RelativeDocumentMoniker": "livraria-api\\api\\UI\\DTOs\\CartaoCreditoClienteCreateDto.cs",
-              "ToolTip": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\CartaoCreditoClienteCreateDto.cs",
-              "RelativeToolTip": "livraria-api\\api\\UI\\DTOs\\CartaoCreditoClienteCreateDto.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Title": "ClienteFacade.cs",
+              "DocumentMoniker": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\Application\\Facades\\ClienteFacade.cs",
+              "RelativeDocumentMoniker": "livraria-api\\api\\Application\\Facades\\ClienteFacade.cs",
+              "ToolTip": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\Application\\Facades\\ClienteFacade.cs",
+              "RelativeToolTip": "livraria-api\\api\\Application\\Facades\\ClienteFacade.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T00:59:52.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClienteDto.cs",
-              "DocumentMoniker": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\ClienteDto.cs",
-              "RelativeDocumentMoniker": "livraria-api\\api\\UI\\DTOs\\ClienteDto.cs",
-              "ToolTip": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\UI\\DTOs\\ClienteDto.cs",
-              "RelativeToolTip": "livraria-api\\api\\UI\\DTOs\\ClienteDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAswCAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T00:58:30.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClienteProfile.cs",
-              "DocumentMoniker": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\Profile\\ClienteProfile.cs",
-              "RelativeDocumentMoniker": "livraria-api\\api\\Profile\\ClienteProfile.cs",
-              "ToolTip": "C:\\Users\\gilso\\OneDrive\\\u00C1rea de Trabalho\\LES\\livraria_les-2025\\livraria-les-2025\\livraria-api\\api\\Profile\\ClienteProfile.cs",
-              "RelativeToolTip": "livraria-api\\api\\Profile\\ClienteProfile.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAkwDAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T00:58:10.541Z",
+              "WhenOpened": "2025-03-23T01:44:53.895Z",
               "EditorCaption": ""
             }
           ]

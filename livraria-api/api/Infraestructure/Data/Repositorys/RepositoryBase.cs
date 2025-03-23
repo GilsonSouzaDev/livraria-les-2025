@@ -36,6 +36,7 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         try
         {
+            _context.Set<T>().Update(entity);
             await _context.SaveChangesAsync();
         }
         catch (DbUpdateConcurrencyException)
